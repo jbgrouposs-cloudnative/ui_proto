@@ -1,0 +1,32 @@
+<div class="content-block">
+	<div class="" style="padding: 0 0 0 20px;margin-bottom: 20px;">
+		<p><h4 style="color: #017681;font-weight: bold;">{{title}}</h4></p>
+	</div>
+	<div style="margin-bottom: 20px;">
+		<uib-tabset active="1">
+			<uib-tab index="0" heading="最近の投稿" select="recentTabSelect()">
+				<div class="alert warning-message" style="margin:3px;" role="alert">xxxxxxさんの投稿はありません。</div>
+			</uib-tab>
+			<uib-tab index="1" heading="ストックした投稿" select="stockTabSelect()">
+				<div class="list-group">
+					<div class="list-group-item list-group-border" ng-repeat="row in stockList">
+						<div class="media">
+							<div class="media-body">
+								<a href ng-click="selectItem(row)"><h4 class="list-group-item-heading">{{row.title}}</h4></a>
+								<p class="list-group-item-text">{{row.userName}}が{{row.postedDate | date: 'yyyy/MM/dd'}}に投稿</p>
+								<!--<p class="list-group-item-text"><i class="icon ion-ios-pricetag"></i>&nbsp;{{row.tagName}}</p>-->
+								<p class="list-group-item-text">{{row.contents}}</p>
+							</div>
+							<div class="media-right" style="vertical-align: middle;">
+								<i class="pull-right icon ion-ios-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</uib-tab>
+			<uib-tab index="2" heading="コメント" select="commentTabSelect()">
+				<div class="alert warning-message" style="margin:3px;" role="alert">xxxxxxさんのコメントはありません。</div>
+			</uib-tab>
+		</uib-tabset>
+	</div>
+</div>

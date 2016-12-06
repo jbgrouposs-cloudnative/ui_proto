@@ -1,0 +1,10 @@
+# node
+/dev/node_modules/
+
+# bower
+/dev/bower_components/
+
+# release
+/release/
+
+.DS_Store

@@ -1,0 +1,38 @@
+{
+  "name": "qiita-clone",
+  "version": "1.0.0",
+  "description": "Clone the qiita application",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OSS Community",
+  "license": "JBCC Corporation",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-cssmin": "*",
+    "gulp-download": "*",
+    "gulp-filesize": "*",
+    "gulp-if": "*",
+    "gulp-jsdoc3": "*",
+    "gulp-minify-html": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-strip-debug": "*",
+    "gulp-typescript": "*",
+    "gulp-uglify": "*",
+    "gulp-webserver": "*",
+    "jaguarjs-jsdoc": "*",
+    "jsdoc": "*",
+    "main-bower-files": "*",
+    "run-sequence": "*",
+    "typescript": "*"
+  }
+}

@@ -1,0 +1,53 @@
+<div class="content-block">
+	<div class="" style="padding: 0 0 0 20px;">
+		<p><h3 style="color: #017681;font-weight: bold;">{{itemData.title}}</h3></p>
+		<!--<p><i class="icon ion-ios-pricetag"></i>&nbsp;{{itemData.tagName}}</p>-->
+		<ul class="nav nav-pills">
+			<li role="presentation">
+				<p>{{itemData.userName}}が{{itemData.postedDate | date: 'yyyy/MM/dd'}}に投稿</p>
+			</li>
+			<li role="presentation" class="pull-right">
+				<a href ng-click="stockFeed()" uib-popover="この記事をストックしました" popover-trigger="'focus'" popover-placement="left">
+					<i class="icon ion-android-download"></i>
+					ストック
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="" style="background-color: rgba(243,243,243,0.7);">
+		<div marked="markdownStr" class="outline" style="padding: 20px"></div>
+	</div>
+	<ul class="nav nav-pills" style="margin-top: 10px;">
+		<li role="presentation" class="pull-right">
+			<a href ng-click="stockFeed()" uib-popover="この記事をストックしました" popover-trigger="'focus'" popover-placement="left">
+				<i class="icon ion-android-download"></i>
+				ストック
+			</a>
+		</li>
+	</ul>
+	<div class="reffer-comment-bg" style="margin: 20px;" ng-repeat="commentItem in commentList">
+		<div class="form-group">
+			<label><i class="icon ion-chatbubble-working"></i>&nbsp;{{commentItem.userName}}</label>
+			<div marked="commentItem.commentContents" class="outline" style="padding: 20px"></div>
+		</div>
+	</div>
+	<div class="input-comment-bg" style="margin: 20px;">
+		<div class="form-group">
+			<label><i class="icon ion-edit"></i>&nbsp;コメントを投稿する</label>
+			<textarea 	name="commentEditorValue" class="content-box"
+						ng-model="commentEditorValue"
+						markdown-editor="{'iconlibrary': 'fa', addExtraButtons: true, resize: 'vertical'}"
+						on-fullscreen="onFullScreenCallback()"
+						on-fullscreen-exit="onFullScreenExitCallback()"
+						rows="5"
+						placeholder="コメントを入力してください">
+			</textarea>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-beige">
+				<i class="icon ion-ios-compose"></i>&nbsp;
+				投稿する
+			</button>
+		</div>
+	</div>
+</div>

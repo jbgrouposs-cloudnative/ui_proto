@@ -1,0 +1,13 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(255, 255, 255, 0.1); min-height: 30px; border-color:rgba(255, 255, 255, 0.1)">
+	<div class="container" style="padding-right: 0; padding-left: 15px; margin-right: 10px; margin-left: auto;">
+		<a class="navbar-brand" style="padding: 0;text-decoration: none; margin-top: 5px; margin-right:20px; height: 30px;">Brand</a>
+		<a href ui-sref="sign-in" class="pull-right" style="color: #fff; text-decoration: none; margin-top: 5px;">
+			<i class="icon ion-ios-locked"></i>
+			Sign In
+		</a>
+	</div>
+</nav>
+<div class="contents">
+	<div ui-view="" class="main-view" ng-class="{'detail-animate':currentState.current.name == 'main.feed-detail'}" autoscroll="false">
+	</div>
+</div>

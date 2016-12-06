@@ -1,0 +1,42 @@
+<div class="container-fluid content-block">
+	<form name="feedPost">
+		<div class="form-group">
+			<label class="sr-only" for="feedTitle">タイトル</label>
+			<input type="text" class="form-control input-lg" id="feedTitle" name="feedTitle" ng-model="feed.feedTitle" placeholder="タイトル"/>
+		</div>
+		<!--
+		<div class="form-group">
+			<label class="sr-only" for="feedTag">タグ</label>
+			<input type="text" class="form-control" id="feedTag" name="feedTag" ng-model="feed.feedTag" placeholder="タグをスペース区切りで５つまで入力（例: Javascript Angular1.x）"/>
+		</div>
+		-->
+		<div class="row">
+			<div class="col-md-12 col-lg-6">
+				<div class="form-group">
+					<label>本文</label>
+					<textarea name="editorValue" class="content-box"
+							  ng-model="editorValue"
+							  markdown-editor="{'iconlibrary': 'fa', addExtraButtons: true, resize: 'vertical'}"
+							  on-fullscreen="onFullScreenCallback()"
+							  on-fullscreen-exit="onFullScreenExitCallback()"
+							  rows="17"
+							  placeholder="Markdownで入力">
+					</textarea>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-6 fill">
+				<div class="form-group">
+					<label>プレビュー</label>
+					<div marked="editorValue" class="outline" style="min-height: 406px;padding: 20px;background-color: rgba(243,243,243,0.7);">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-beige" ng-click="postFeedData(feed)">
+				<i class="icon ion-ios-cloud-upload"></i>&nbsp;
+				投稿する
+			</button>
+		</div>
+	</form>
+</div>
