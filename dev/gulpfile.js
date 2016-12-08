@@ -357,13 +357,16 @@ gulp.task('debug', function() {
 });
 　
 // 3.開発タスク（リリース動作確認モード）[default]
-gulp.task('default', function() {
+// gulp.task('default', function() {
     // runSequenceのSubFunctionは、終了を待たずに次が実行されてしまう為、
     // build Task と同じものを指定
-    return　runSequence(
-        '_clean', '_sass', ['_copy_js', '_copy_libs', '_copy_html', '_copy_css', '_ts'], ['_copy_etc'], ['_watch_js', '_watch_lib', '_watch_html', '_watch_css', '_watch_etc', '_watch_sass', '_watch_ts'], ['_webserver']
-    );
-});
+//     return　runSequence(
+//         '_clean', '_sass', ['_copy_js', '_copy_libs', '_copy_html', '_copy_css', '_ts'], ['_copy_etc'], ['_watch_js', '_watch_lib', '_watch_html', '_watch_css', '_watch_etc', '_watch_sass', '_watch_ts'], ['_webserver']
+//     );
+// });
+
+gulp.task('default', ['build']);  
+
 
 // 4.テスト実行
 
