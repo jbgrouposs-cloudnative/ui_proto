@@ -1,0 +1,1 @@
+angular.module("config",[]),angular.module("config").config(["RestangularProvider","ApiUrlConstant",function(a,n){a.setJsonp(!0),a.setDefaultRequestParams("jsonp",{callback:"JSON_CALLBACK"})}]),angular.module("config").run(["$rootScope","$state","$location","Restangular","ApiUrlConstant",function(a,n,o,e,l){e.setBaseUrl(l.lambdaBase),e.setFullResponse(!0)}]);

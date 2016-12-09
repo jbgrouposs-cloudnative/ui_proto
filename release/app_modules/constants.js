@@ -1,0 +1,1 @@
+angular.module("constants",[]),angular.module("constants").constant("ApiUrlConstant",function(){var a="https://qij6pqtvse.execute-api.us-east-1.amazonaws.com/beta/";return{lambdaBase:a,sampleFunc:"angularsample"}}());
