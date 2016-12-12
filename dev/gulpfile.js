@@ -180,7 +180,7 @@ gulp.task('_copy_html', function() {
         .pipe(plumber({
             errorHandler: notify.onError('<%= error.message %>')
         }))
-        .pipe(
+        /*.pipe(
             gulpif(
                 checkMode(),
                 htmlmin({
@@ -188,7 +188,7 @@ gulp.task('_copy_html', function() {
                     quotes: true,
                 })
             )
-        )
+        )*/
         .pipe(size())
         .pipe(gulp.dest(OUT_PATH));
 });
